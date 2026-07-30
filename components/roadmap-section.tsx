@@ -19,7 +19,6 @@ const ROADMAP_STEPS = [
     stepColor: 'text-[#E52E2E]',
     borderColor: 'border-[#E52E2E]',
     glowColor: 'rgba(229, 46, 46, 0.5)',
-    iconColor: 'text-[#E52E2E]',
     title: 'LAUNCH',
     description: 'Get MADCAT out to the streets.',
     imageSrc: '/about-1-removebg-preview.png',
@@ -29,30 +28,27 @@ const ROADMAP_STEPS = [
     stepColor: 'text-[#F7B000]',
     borderColor: 'border-[#F7B000]',
     glowColor: 'rgba(247, 176, 0, 0.5)',
-    iconColor: 'text-[#F7B000]',
     title: 'BUILD THE PACK',
     description: 'Grow the community and spread the word.',
-    icon: Users,
+    imageSrc: '/roadmap-2.png',
   },
   {
     step: 'STEP 3',
-    stepColor: 'text-[#F7B000]',
-    borderColor: 'border-[#F7B000]',
-    glowColor: 'rgba(247, 176, 0, 0.5)',
-    iconColor: 'text-[#F7B000]',
-    title: 'TAKE OVER',
-    description: 'Listings, partnerships and global expansion.',
-    icon: Rocket,
-  },
-  {
-    step: 'STEP 4',
     stepColor: 'text-[#E52E2E]',
     borderColor: 'border-[#E52E2E]',
     glowColor: 'rgba(229, 46, 46, 0.5)',
-    iconColor: 'text-[#F7B000]',
+    title: 'TAKE OVER',
+    description: 'Listings, partnerships and global expansion.',
+    imageSrc: '/roadmap-3.png',
+  },
+  {
+    step: 'STEP 4',
+    stepColor: 'text-[#F7B000]',
+    borderColor: 'border-[#F7B000]',
+    glowColor: 'rgba(247, 176, 0, 0.5)',
     title: 'RULE THE MEME WORLD',
     description: 'MADCAT becomes the legend.',
-    icon: Crown,
+    imageSrc: '/roadmap-4.png',
   },
 ]
 
@@ -104,8 +100,6 @@ export function RoadmapSection() {
             {/* 4 Steps Grid (Responsive 2x2 on mobile, 4 columns on sm+) */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-4 relative z-10">
               {ROADMAP_STEPS.map((item, idx) => {
-                const StepIcon = item.icon
-
                 return (
                   <motion.div
                     key={item.step}
@@ -134,17 +128,13 @@ export function RoadmapSection() {
                         className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full bg-black border-2 ${item.borderColor} flex items-center justify-center relative z-10 transition-transform duration-300 group-hover:scale-110 overflow-hidden p-2`}
                         style={{ boxShadow: `0 0 20px ${item.glowColor}` }}
                       >
-                        {item.imageSrc ? (
-                          <Image
-                            src={item.imageSrc}
-                            alt={item.title}
-                            width={56}
-                            height={56}
-                            className="w-full h-full object-contain filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
-                          />
-                        ) : StepIcon ? (
-                          <StepIcon className={`w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 ${item.iconColor} transition-transform duration-300 group-hover:scale-110`} />
-                        ) : null}
+                        <Image
+                          src={item.imageSrc}
+                          alt={item.title}
+                          width={56}
+                          height={56}
+                          className="w-full h-full object-contain filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+                        />
                       </div>
                     </div>
 

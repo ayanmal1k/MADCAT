@@ -70,19 +70,19 @@ export function Footer() {
             </p>
           </div>
 
-          {/* MIDDLE COLUMN: Cat Image centered */}
+          {/* MIDDLE COLUMN: Cat Image centered - Made Much Bigger */}
           <div className="flex justify-center items-center">
             <motion.div 
               whileHover={{ scale: 1.06 }}
               transition={{ duration: 0.3 }}
-              className="relative w-44 sm:w-52 md:w-60 h-44 sm:h-52 md:h-60"
+              className="relative w-64 sm:w-80 md:w-96 lg:w-[420px] h-64 sm:h-80 md:h-96 lg:h-[420px] -my-4 sm:-my-6 lg:-my-10"
             >
               <Image
                 src="/cat.png"
                 alt="MADCAT Mascot Footer"
                 fill
                 priority
-                className="object-contain filter drop-shadow-[0_10px_25px_rgba(234,167,27,0.2)]"
+                className="object-contain filter drop-shadow-[0_15px_35px_rgba(234,167,27,0.3)]"
               />
             </motion.div>
           </div>
