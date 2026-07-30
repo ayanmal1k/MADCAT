@@ -10,7 +10,7 @@ const NAV_LINKS = [
   { name: 'About', href: '#about' },
   { name: 'Tokenomics', href: '#tokenomics' },
   { name: 'Roadmap', href: '#roadmap' },
-  { name: 'Community', href: '#social' },
+  { name: 'Community', href: '#community' },
 ]
 
 export function Navbar() {

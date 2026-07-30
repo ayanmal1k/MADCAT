@@ -22,7 +22,7 @@ function TelegramIcon({ className = 'w-6 h-6' }: { className?: string }) {
 
 export function SocialSection() {
   return (
-    <section className="relative w-full min-h-[580px] sm:min-h-[660px] md:min-h-0 pt-36 sm:pt-44 md:pt-14 pb-8 sm:pb-12 md:pb-16 px-4 sm:px-8 md:px-12 flex flex-col justify-end overflow-hidden selection:bg-[#EAA71B] selection:text-black">
+    <section id="community" className="relative w-full min-h-[580px] sm:min-h-[660px] md:min-h-0 pt-36 sm:pt-44 md:pt-14 pb-8 sm:pb-12 md:pb-16 px-4 sm:px-8 md:px-12 flex flex-col justify-end overflow-hidden selection:bg-[#EAA71B] selection:text-black">
       
       {/* DESKTOP BACKGROUND IMAGE from public/social-bg.png */}
       <div className="absolute inset-0 hidden md:block pointer-events-none z-0">

@@ -54,7 +54,7 @@ const ROADMAP_STEPS = [
 
 export function RoadmapSection() {
   return (
-    <section className="relative w-full bg-black pt-12 sm:pt-16 lg:pt-20 pb-6 sm:pb-8 lg:pb-10 px-4 sm:px-6 md:px-12 lg:px-16 overflow-hidden selection:bg-[#E52E2E] selection:text-white border-t-2 border-zinc-900">
+    <section id="roadmap" className="relative w-full bg-black pt-12 sm:pt-16 lg:pt-20 pb-6 sm:pb-8 lg:pb-10 px-4 sm:px-6 md:px-12 lg:px-16 overflow-hidden selection:bg-[#E52E2E] selection:text-white border-t-2 border-zinc-900">
       
       {/* Main Container */}
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">

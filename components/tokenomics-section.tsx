@@ -100,7 +100,7 @@ export function TokenomicsSection() {
   const [activeSegment, setActiveSegment] = useState<string | null>(null)
 
   return (
-    <section className="relative w-full bg-[#F5AB00] py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-12 lg:px-16 overflow-hidden selection:bg-black selection:text-white border-t-4 border-b-4 border-black">
+    <section id="tokenomics" className="relative w-full bg-[#F5AB00] py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-12 lg:px-16 overflow-hidden selection:bg-black selection:text-white border-t-4 border-b-4 border-black">
       
       {/* Comic Action Sunburst Rays Radial Background */}
       <div 

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export function AboutSection() {
   return (
-    <section className="relative w-full bg-black pt-12 sm:pt-20 md:pt-24 pb-12 sm:pb-20 md:pb-24 px-4 sm:px-8 md:px-12 lg:px-16 overflow-hidden selection:bg-[#E61C1C] selection:text-white">
+    <section id="about" className="relative w-full bg-black pt-12 sm:pt-20 md:pt-24 pb-12 sm:pb-20 md:pb-24 px-4 sm:px-8 md:px-12 lg:px-16 overflow-hidden selection:bg-[#E61C1C] selection:text-white">
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col gap-0">
         
         {/* Top Section: Big About Cat Image + Story */}
