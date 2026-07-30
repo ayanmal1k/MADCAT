@@ -105,6 +105,7 @@ html.lenis {
 
 @theme inline {
   --font-ultra-fresh: var(--font-ultra-fresh), 'Ultra Fresh', sans-serif;
+  --font-basic: var(--font-basic), 'Basic', sans-serif;
   --font-sans: 'Geist', 'Geist Fallback';
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
@@ -151,5 +152,21 @@ html.lenis {
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .font-ultra-fresh {
+    font-family: var(--font-ultra-fresh), 'Ultra Fresh', cursive, sans-serif;
+  }
+  .font-basic {
+    font-family: var(--font-basic), 'Basic', sans-serif;
+  }
+  .text-stroke-fat {
+    -webkit-text-stroke: 5.5px #000000;
+    paint-order: stroke fill;
+    text-shadow: 
+      3px 3px 0 #000, 
+      -3px -3px 0 #000, 
+      3px -3px 0 #000, 
+      -3px 3px 0 #000,
+      0 10px 20px rgba(0, 0, 0, 0.95);
   }
 }
