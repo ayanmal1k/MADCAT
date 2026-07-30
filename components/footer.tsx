@@ -31,15 +31,15 @@ export function Footer() {
 
   return (
     <footer className="relative w-full bg-black text-white pt-16 sm:pt-20 pb-8 px-4 sm:px-8 md:px-12 border-t-2 border-zinc-800 overflow-hidden selection:bg-[#EAA71B] selection:text-black">
-      
+
       {/* Background Radial Subtle Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-red-600/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col gap-12 sm:gap-16">
-        
+
         {/* TOP MAIN ROW: 3 COLUMNS (Left: Logo/Text, Middle: Cat Image, Right: Socials & Nav Column) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 items-center text-center md:text-left">
-          
+
           {/* LEFT COLUMN: Logo + Logo Text */}
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="flex items-center gap-3">
@@ -52,7 +52,7 @@ export function Footer() {
                   className="object-cover"
                 />
               </div>
-              
+
               <div className="w-36 sm:w-44 h-auto relative">
                 <Image
                   src="/text-logo.png"
@@ -72,7 +72,7 @@ export function Footer() {
 
           {/* MIDDLE COLUMN: Cat Image centered - Made Much Bigger */}
           <div className="flex justify-center items-center">
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.06 }}
               transition={{ duration: 0.3 }}
               className="relative w-64 sm:w-80 md:w-96 lg:w-[420px] h-64 sm:h-80 md:h-96 lg:h-[420px] -my-4 sm:-my-6 lg:-my-10"
@@ -89,10 +89,10 @@ export function Footer() {
 
           {/* RIGHT COLUMN: 3 Circular Buttons + Columned Nav Links */}
           <div className="flex flex-col items-center md:items-end gap-6">
-            
+
             {/* 3 Circular Social Buttons */}
             <div className="flex items-center gap-3">
-              
+
               {/* Telegram Button */}
               <motion.a
                 href="https://t.me/+nkVhclURSUhhZjZh"
@@ -141,17 +141,27 @@ export function Footer() {
             </div>
 
             {/* Columned Navigation Links */}
-            <nav className="flex flex-col items-center md:items-end gap-2 font-basic text-sm font-bold tracking-wider">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-gray-300 hover:text-[#EAA71B] transition-colors uppercase"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </nav>
+            <div className="relative mt-2">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none -z-0 w-64 h-64 md:w-80 md:h-80 md:translate-x-[-30%]">
+                <Image
+                  src="/paw.png"
+                  alt="Paw Background"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <nav className="relative z-10 flex flex-col items-center md:items-end gap-2 font-basic text-sm font-bold tracking-wider">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="text-gray-300 hover:text-[#EAA71B] transition-colors uppercase"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </nav>
+            </div>
 
           </div>
 
