@@ -81,16 +81,16 @@ export function HeroSection() {
           className="block md:hidden object-cover object-center z-0 w-full h-full"
         />
 
-        {/* Content Overlay - Positioned higher up & horizontally centered on mobile */}
-        <div className="relative z-10 w-full h-full flex flex-col justify-start md:justify-center items-center md:items-start px-4 sm:px-12 md:px-24 lg:px-32 xl:px-40 pt-[10vh] sm:pt-[10vh] md:py-8">
-          <div className="w-full max-w-md sm:max-w-xl md:max-w-xl lg:max-w-[55%] xl:max-w-[50%] flex flex-col items-center md:items-start gap-3 sm:gap-4 md:gap-6 mt-0 transform translate-y-0">
+        {/* Content Overlay - Mobile: top-positioned & centered | Desktop: vertically centered & left-aligned */}
+        <div className="relative z-10 w-full h-full flex flex-col justify-start md:justify-center items-center md:items-start px-5 sm:px-12 md:px-24 lg:px-32 xl:px-40 pt-[10vh] sm:pt-[10vh] md:py-8">
+          <div className="w-full max-w-md sm:max-w-md md:max-w-xl lg:max-w-[55%] xl:max-w-[50%] flex flex-col items-center md:items-start gap-3 sm:gap-4 md:gap-6 mt-0 transform translate-y-0">
 
-            {/* Logo Text Image - Bigger & Horizontally Centered */}
+            {/* Logo Text Image */}
             <motion.div
               initial={{ opacity: 0, y: -20, rotate: 0 }}
               animate={{ opacity: 1, y: 0, rotate: -3.5 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full max-w-[380px] sm:max-w-[480px] md:max-w-[560px] lg:max-w-[680px] xl:max-w-[740px] transform origin-center md:origin-bottom-left mx-auto md:mx-0"
+              className="w-full max-w-[380px] sm:max-w-[440px] md:max-w-[560px] lg:max-w-[680px] xl:max-w-[740px] transform origin-center md:origin-bottom-left mx-auto md:mx-0"
             >
               <Image
                 src="/text-logo.png"
@@ -102,12 +102,12 @@ export function HeroSection() {
               />
             </motion.div>
 
-            {/* Subheading Graphic Text Image - Bigger & Horizontally Centered */}
+            {/* Subheading Graphic Text Image */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full max-w-[340px] sm:max-w-[450px] md:max-w-[520px] lg:max-w-[620px] mx-auto md:mx-0"
+              className="w-full max-w-[340px] sm:max-w-[420px] md:max-w-[520px] lg:max-w-[620px] mx-auto md:mx-0 md:-mt-6 lg:-mt-8 xl:-mt-10"
             >
               <Image
                 src="/hero-subheading.png"
@@ -119,27 +119,27 @@ export function HeroSection() {
               />
             </motion.div>
 
-            {/* Description Paragraph - Bigger Text */}
+            {/* Description Paragraph */}
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-100 font-basic font-normal leading-relaxed max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] text-center md:text-left"
+              className="text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-100 font-basic font-normal leading-relaxed max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] text-center md:text-left"
             >
               Born from pure fury and fueled by an unstoppable attitude, MADCAT is the ultimate symbol of aggression, determination, and never backing down.
             </motion.p>
 
-            {/* Magnetic Action Buttons - Bigger & Single Row on Mobile */}
+            {/* Action Buttons - Single Row on Mobile, Original Flex Layout on Desktop */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-row flex-nowrap items-center justify-center md:justify-start gap-2.5 sm:gap-4 pt-1 font-basic w-full max-w-full"
+              className="flex flex-row flex-nowrap md:flex-wrap items-center justify-center md:justify-start gap-2.5 sm:gap-4 pt-1 font-basic w-full max-w-full"
             >
               {/* BUY $MADCAT Button */}
               <MagneticButton
                 href="#buy"
-                className="px-4 py-3 sm:px-7 sm:py-3.5 md:px-9 md:py-4 bg-gradient-to-r from-[#FFC800] via-[#F7B000] to-[#EA9E00] text-black font-basic font-bold text-xs sm:text-base md:text-xl rounded-xl border-2 border-black tracking-wider uppercase flex items-center justify-center whitespace-nowrap shrink-0 flex-1 sm:flex-initial shadow-[0_8px_25px_rgba(247,176,0,0.5)] hover:shadow-[0_12px_35px_rgba(247,176,0,0.85)] transition-shadow cursor-pointer"
+                className="px-4 py-3 sm:px-9 sm:py-4 bg-gradient-to-r from-[#FFC800] via-[#F7B000] to-[#EA9E00] text-black font-basic font-bold text-xs sm:text-base md:text-xl rounded-xl border-2 border-black tracking-wider uppercase flex items-center justify-center whitespace-nowrap shrink-0 flex-1 sm:flex-initial shadow-[0_8px_25px_rgba(247,176,0,0.5)] hover:shadow-[0_12px_35px_rgba(247,176,0,0.85)] transition-shadow cursor-pointer"
               >
                 BUY $MADCAT
               </MagneticButton>
@@ -147,7 +147,7 @@ export function HeroSection() {
               {/* JOIN COMMUNITY Button */}
               <MagneticButton
                 href="#community"
-                className="px-4 py-3 sm:px-7 sm:py-3.5 md:px-9 md:py-4 bg-black/90 hover:bg-black text-white font-basic font-bold text-xs sm:text-base md:text-xl rounded-xl border-2 border-white/60 hover:border-white tracking-wider uppercase flex items-center justify-center gap-1.5 sm:gap-2.5 whitespace-nowrap shrink-0 flex-1 sm:flex-initial shadow-[0_8px_25px_rgba(0,0,0,0.8)] hover:shadow-[0_12px_35px_rgba(255,255,255,0.3)] transition-shadow cursor-pointer"
+                className="px-4 py-3 sm:px-9 sm:py-4 bg-black/90 hover:bg-black text-white font-basic font-bold text-xs sm:text-base md:text-xl rounded-xl border-2 border-white/60 hover:border-white tracking-wider uppercase flex items-center justify-center gap-1.5 sm:gap-2.5 whitespace-nowrap shrink-0 flex-1 sm:flex-initial shadow-[0_8px_25px_rgba(0,0,0,0.8)] hover:shadow-[0_12px_35px_rgba(255,255,255,0.3)] transition-shadow cursor-pointer"
               >
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .54-1.43.53-.47-.01-1.37-.26-2.04-.48-.82-.27-1.47-.42-1.42-.88.03-.24.37-.49 1.02-.75 3.99-1.74 6.66-2.89 8.01-3.45 3.81-1.58 4.6-.19 4.67.65z" />
