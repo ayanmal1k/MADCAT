@@ -1,5 +1,6 @@
 import { Navbar } from '@/components/navbar'
 import { HeroSection } from '@/components/hero-section'
+import { ContractSection } from '@/components/contract-section'
 import { AboutSection } from '@/components/about-section'
 import { TokenomicsSection } from '@/components/tokenomics-section'
 import { RoadmapSection } from '@/components/roadmap-section'
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="min-h-screen bg-black">
       <Navbar />
       <HeroSection />
+      <ContractSection />
       <AboutSection />
       <TokenomicsSection />
       <RoadmapSection />
