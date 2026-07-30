@@ -22,7 +22,7 @@ function TelegramIcon({ className = 'w-6 h-6' }: { className?: string }) {
 
 export function SocialSection() {
   return (
-    <section className="relative w-full py-6 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-8 md:px-12 overflow-hidden selection:bg-[#EAA71B] selection:text-black">
+    <section className="relative w-full min-h-[580px] sm:min-h-[660px] md:min-h-0 pt-36 sm:pt-44 md:pt-14 pb-8 sm:pb-12 md:pb-16 px-4 sm:px-8 md:px-12 flex flex-col justify-end overflow-hidden selection:bg-[#EAA71B] selection:text-black">
       
       {/* DESKTOP BACKGROUND IMAGE from public/social-bg.png */}
       <div className="absolute inset-0 hidden md:block pointer-events-none z-0">
@@ -35,19 +35,19 @@ export function SocialSection() {
         />
       </div>
 
-      {/* MOBILE BACKGROUND IMAGE from public/social-bg-mobile.png */}
+      {/* MOBILE BACKGROUND IMAGE from public/social-bg-mobile.png (Cat at Top) */}
       <div className="absolute inset-0 block md:hidden pointer-events-none z-0">
         <Image
           src="/social-bg-mobile.png"
           alt="MADCAT Social Mobile Background"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-top"
         />
       </div>
 
-      {/* Main Container - Right side content aligned */}
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-end">
+      {/* Main Container - Right side content aligned, bottom pushed on mobile */}
+      <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-end w-full mt-auto">
         
         {/* CONTENT COLUMN: Graphic Text Centered + 3 Large CTA Buttons Centered Horizontally */}
         <motion.div
@@ -55,10 +55,10 @@ export function SocialSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col items-center text-center gap-6 sm:gap-8 max-w-xl lg:max-w-2xl z-20 w-full ml-auto"
+          className="flex flex-col items-center text-center gap-5 sm:gap-7 max-w-xl lg:max-w-2xl z-20 w-full ml-auto"
         >
           {/* Main Title Graphic Image from public/soxcial-tetx.png - Centered */}
-          <div className="relative w-full max-w-[340px] sm:max-w-[460px] md:max-w-[560px] lg:max-w-[640px] xl:max-w-[700px] flex justify-center">
+          <div className="relative w-full max-w-[320px] sm:max-w-[440px] md:max-w-[560px] lg:max-w-[640px] xl:max-w-[700px] flex justify-center">
             <Image
               src="/soxcial-tetx.png"
               alt="JOIN THE PACK. BE THE FURY."
@@ -69,47 +69,50 @@ export function SocialSection() {
             />
           </div>
 
-          {/* 3 Large CTA Buttons Wrapper - Centered Horizontally */}
-          <div className="flex flex-col items-center gap-4 sm:gap-5 w-full max-w-[320px] sm:max-w-[400px] md:max-w-[460px] mx-auto">
+          {/* CTA Buttons Wrapper - 2 in a row on mobile, 1 in a row on sm/md+ */}
+          <div className="flex flex-col items-center gap-3 sm:gap-4.5 w-full max-w-[320px] sm:max-w-[400px] md:max-w-[460px] mx-auto">
             
-            {/* Button 1: JOIN TELEGRAM */}
-            <motion.a
-              href="https://t.me"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full flex items-center justify-center gap-3 sm:gap-4 px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl bg-black border-2 border-white text-white font-basic font-black text-base sm:text-lg md:text-xl uppercase tracking-widest shadow-[0_12px_28px_rgba(0,0,0,0.95)] hover:bg-zinc-950 hover:border-[#F7B000] hover:text-[#F7B000] hover:shadow-[0_0_25px_rgba(247,176,0,0.4)] transition-all duration-300 group cursor-pointer"
-            >
-              <TelegramIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white group-hover:text-[#F7B000] group-hover:scale-110 transition-all" />
-              <span>JOIN TELEGRAM</span>
-              <TelegramIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white group-hover:text-[#F7B000] group-hover:scale-110 transition-all" />
-            </motion.a>
+            {/* Telegram & Twitter / X: 2 in a row on mobile, 1 in a row on sm+ */}
+            <div className="grid grid-cols-2 sm:grid-cols-1 gap-2.5 sm:gap-4.5 w-full">
+              
+              {/* Telegram Button */}
+              <motion.a
+                href="https://t.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.98 }}
+                className="flex items-center justify-center gap-2 sm:gap-3 px-3 sm:px-8 py-3 sm:py-4 rounded-2xl bg-black border-2 border-white text-white font-basic font-black text-xs sm:text-base md:text-lg uppercase tracking-wider sm:tracking-widest shadow-[0_10px_24px_rgba(0,0,0,0.95)] hover:bg-zinc-950 hover:border-[#F7B000] hover:text-[#F7B000] hover:shadow-[0_0_20px_rgba(247,176,0,0.4)] transition-all duration-300 group cursor-pointer"
+              >
+                <TelegramIcon className="w-4 h-4 sm:w-6 sm:h-6 text-white group-hover:text-[#F7B000] group-hover:scale-110 transition-all flex-shrink-0" />
+                <span className="truncate">JOIN TELEGRAM</span>
+              </motion.a>
 
-            {/* Button 2: TWITTER / X */}
-            <motion.a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full flex items-center justify-center gap-3 sm:gap-4 px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl bg-black border-2 border-white text-white font-basic font-black text-base sm:text-lg md:text-xl uppercase tracking-widest shadow-[0_12px_28px_rgba(0,0,0,0.95)] hover:bg-zinc-950 hover:border-white hover:shadow-[0_0_25px_rgba(255,255,255,0.4)] transition-all duration-300 group cursor-pointer"
-            >
-              <TwitterIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white group-hover:scale-110 transition-transform" />
-              <span>TWITTER / X</span>
-              <TwitterIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white group-hover:scale-110 transition-transform" />
-            </motion.a>
+              {/* Twitter / X Button */}
+              <motion.a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.98 }}
+                className="flex items-center justify-center gap-2 sm:gap-3 px-3 sm:px-8 py-3 sm:py-4 rounded-2xl bg-black border-2 border-white text-white font-basic font-black text-xs sm:text-base md:text-lg uppercase tracking-wider sm:tracking-widest shadow-[0_10px_24px_rgba(0,0,0,0.95)] hover:bg-zinc-950 hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300 group cursor-pointer"
+              >
+                <TwitterIcon className="w-4 h-4 sm:w-6 sm:h-6 text-white group-hover:scale-110 transition-transform flex-shrink-0" />
+                <span className="truncate">TWITTER / X</span>
+              </motion.a>
 
-            {/* Button 3: BUY NOW */}
+            </div>
+
+            {/* Bottom Row: BUY NOW Button (1 in a row) */}
             <motion.a
               href="https://raydium.io"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full flex items-center justify-center gap-3 sm:gap-4 px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-2xl bg-black border-2 border-[#E52E2E] text-white font-basic font-black text-base sm:text-lg md:text-xl uppercase tracking-widest shadow-[0_12px_28px_rgba(0,0,0,0.95)] hover:bg-zinc-950 hover:border-red-500 hover:text-red-400 hover:shadow-[0_0_25px_rgba(229,46,46,0.5)] transition-all duration-300 group cursor-pointer"
+              className="w-full flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-black border-2 border-[#E52E2E] text-white font-basic font-black text-sm sm:text-base md:text-lg uppercase tracking-widest shadow-[0_12px_28px_rgba(0,0,0,0.95)] hover:bg-zinc-950 hover:border-red-500 hover:text-red-400 hover:shadow-[0_0_25px_rgba(229,46,46,0.5)] transition-all duration-300 group cursor-pointer"
             >
-              <div className="w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center">
+              <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center flex-shrink-0">
                 <Image
                   src="/Solana-Crypto-Logo-Transparent.png"
                   alt="Solana Logo"
@@ -119,15 +122,6 @@ export function SocialSection() {
                 />
               </div>
               <span>BUY NOW</span>
-              <div className="w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center">
-                <Image
-                  src="/Solana-Crypto-Logo-Transparent.png"
-                  alt="Solana Logo"
-                  width={24}
-                  height={24}
-                  className="w-full h-full object-contain filter invert group-hover:scale-110 transition-transform"
-                />
-              </div>
             </motion.a>
 
           </div>

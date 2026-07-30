@@ -3,6 +3,7 @@ import { AboutSection } from '@/components/about-section'
 import { TokenomicsSection } from '@/components/tokenomics-section'
 import { RoadmapSection } from '@/components/roadmap-section'
 import { SocialSection } from '@/components/social-section'
+import { Footer } from '@/components/footer'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <TokenomicsSection />
       <RoadmapSection />
       <SocialSection />
+      <Footer />
     </main>
   )
 }
