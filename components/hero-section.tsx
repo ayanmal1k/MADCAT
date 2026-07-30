@@ -82,7 +82,7 @@ export function HeroSection() {
         />
 
         {/* Content Overlay - Mobile: top-positioned & centered | Desktop: vertically centered & left-aligned */}
-        <div className="relative z-10 w-full h-full flex flex-col justify-start md:justify-center items-center md:items-start px-5 sm:px-12 md:px-24 lg:px-32 xl:px-40 pt-[10vh] sm:pt-[10vh] md:py-8">
+        <div className="relative z-10 w-full h-full flex flex-col justify-start md:justify-center items-center md:items-start px-5 sm:px-12 md:px-24 lg:px-32 xl:px-40 pt-6 sm:pt-8 md:py-8">
           <div className="w-full max-w-md sm:max-w-md md:max-w-xl lg:max-w-[55%] xl:max-w-[50%] flex flex-col items-center md:items-start gap-3 sm:gap-4 md:gap-6 mt-0 transform translate-y-0">
 
             {/* Logo Text Image */}
