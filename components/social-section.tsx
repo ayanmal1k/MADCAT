@@ -77,7 +77,7 @@ export function SocialSection() {
               
               {/* Telegram Button */}
               <motion.a
-                href="https://t.me"
+                href="https://t.me/+nkVhclURSUhhZjZh"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.04 }}
@@ -90,7 +90,7 @@ export function SocialSection() {
 
               {/* Twitter / X Button */}
               <motion.a
-                href="https://twitter.com"
+                href="https://x.com/madcat9505"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.04 }}
@@ -105,7 +105,7 @@ export function SocialSection() {
 
             {/* Bottom Row: BUY NOW Button (1 in a row) */}
             <motion.a
-              href="https://raydium.io"
+              href="https://pump.fun/coin/8a7hJjAFdYPadrgupNXskfsaeQNyeRTsBXeLLpSqpump"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04 }}

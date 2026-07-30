@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Copy, Check } from 'lucide-react'
 
 export function ContractSection() {
@@ -37,16 +37,54 @@ export function ContractSection() {
         {/* Right: Copy Button (Styled like Navbar red button) */}
         <motion.button
           onClick={handleCopy}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="px-6 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-red-600 via-red-650 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-basic font-black text-xs sm:text-base uppercase tracking-wider shadow-[0_4px_16px_rgba(220,38,38,0.5)] border border-red-500/80 transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer shrink-0 min-w-[125px]"
+          whileHover={{ 
+            scale: 1.08,
+            boxShadow: "0px 0px 25px rgba(220,38,38,0.7)",
+            y: -2
+          }}
+          whileTap={{ 
+            scale: 0.9,
+            rotate: -2,
+            boxShadow: "0px 0px 10px rgba(220,38,38,0.3)"
+          }}
+          transition={{ type: "spring", stiffness: 300, damping: 15 }}
+          className="px-6 sm:px-7 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-red-600 via-red-500 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-basic font-black text-xs sm:text-base uppercase tracking-wider shadow-[0_4px_16px_rgba(220,38,38,0.5)] border border-red-500/80 flex items-center justify-center cursor-pointer shrink-0 min-w-[140px] relative overflow-hidden group"
         >
-          <span>{copied ? 'COPIED!' : 'COPY'}</span>
-          {copied ? (
-            <Check className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 stroke-[3]" />
-          ) : (
-            <Copy className="w-4 h-4 sm:w-5 sm:h-5 text-white stroke-[2.5]" />
-          )}
+          {/* Shine effect on hover */}
+          <motion.div 
+            className="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 mix-blend-overlay"
+            initial={{ x: '-100%' }}
+            whileHover={{ x: '100%' }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
+          />
+
+          <AnimatePresence mode="wait">
+            {copied ? (
+              <motion.div 
+                key="copied"
+                initial={{ opacity: 0, y: 15, scale: 0.5 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -15, scale: 0.5 }}
+                transition={{ duration: 0.2 }}
+                className="flex items-center justify-center gap-2.5 w-full"
+              >
+                <span>COPIED!</span>
+                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 stroke-[3]" />
+              </motion.div>
+            ) : (
+              <motion.div 
+                key="copy"
+                initial={{ opacity: 0, y: 15, scale: 0.5 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -15, scale: 0.5 }}
+                transition={{ duration: 0.2 }}
+                className="flex items-center justify-center gap-2.5 w-full"
+              >
+                <span>COPY</span>
+                <Copy className="w-4 h-4 sm:w-5 sm:h-5 text-white stroke-[2.5]" />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.button>
 
       </motion.div>

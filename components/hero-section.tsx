@@ -9,10 +9,14 @@ function MagneticButton({
   children,
   className,
   href,
+  target,
+  rel,
 }: {
   children: React.ReactNode
   className?: string
   href?: string
+  target?: string
+  rel?: string
 }) {
   const ref = useRef<HTMLAnchorElement>(null)
 
@@ -43,6 +47,8 @@ function MagneticButton({
     <motion.a
       ref={ref}
       href={href}
+      target={target}
+      rel={rel}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ x: springX, y: springY }}
@@ -138,7 +144,9 @@ export function HeroSection() {
             >
               {/* BUY $MADCAT Button */}
               <MagneticButton
-                href="#buy"
+                href="https://pump.fun/coin/8a7hJjAFdYPadrgupNXskfsaeQNyeRTsBXeLLpSqpump"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-4 py-3 sm:px-9 sm:py-4 bg-gradient-to-r from-[#FFC800] via-[#F7B000] to-[#EA9E00] text-black font-basic font-bold text-xs sm:text-base md:text-xl rounded-xl border-2 border-black tracking-wider uppercase flex items-center justify-center whitespace-nowrap shrink-0 flex-1 sm:flex-initial shadow-[0_8px_25px_rgba(247,176,0,0.5)] hover:shadow-[0_12px_35px_rgba(247,176,0,0.85)] transition-shadow cursor-pointer"
               >
                 BUY $MADCAT
@@ -146,7 +154,9 @@ export function HeroSection() {
 
               {/* JOIN COMMUNITY Button */}
               <MagneticButton
-                href="#community"
+                href="https://t.me/+nkVhclURSUhhZjZh"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-4 py-3 sm:px-9 sm:py-4 bg-black/90 hover:bg-black text-white font-basic font-bold text-xs sm:text-base md:text-xl rounded-xl border-2 border-white/60 hover:border-white tracking-wider uppercase flex items-center justify-center gap-1.5 sm:gap-2.5 whitespace-nowrap shrink-0 flex-1 sm:flex-initial shadow-[0_8px_25px_rgba(0,0,0,0.8)] hover:shadow-[0_12px_35px_rgba(255,255,255,0.3)] transition-shadow cursor-pointer"
               >
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24">

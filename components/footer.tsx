@@ -95,7 +95,7 @@ export function Footer() {
               
               {/* Telegram Button */}
               <motion.a
-                href="https://t.me"
+                href="https://t.me/+nkVhclURSUhhZjZh"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.15, y: -3 }}
@@ -108,7 +108,7 @@ export function Footer() {
 
               {/* Twitter / X Button */}
               <motion.a
-                href="https://twitter.com"
+                href="https://x.com/madcat9505"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.15, y: -3 }}
@@ -121,7 +121,7 @@ export function Footer() {
 
               {/* DexScreener / Solana Button */}
               <motion.a
-                href="https://dexscreener.com"
+                href="https://pump.fun/coin/8a7hJjAFdYPadrgupNXskfsaeQNyeRTsBXeLLpSqpump"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.15, y: -3 }}

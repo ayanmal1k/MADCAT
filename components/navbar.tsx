@@ -80,7 +80,7 @@ export function Navbar() {
 
           {/* Red BUY $MADCAT Button */}
           <motion.a
-            href="https://raydium.io"
+            href="https://pump.fun/coin/8a7hJjAFdYPadrgupNXskfsaeQNyeRTsBXeLLpSqpump"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
@@ -127,7 +127,7 @@ export function Navbar() {
             ))}
 
             <a
-              href="https://raydium.io"
+              href="https://pump.fun/coin/8a7hJjAFdYPadrgupNXskfsaeQNyeRTsBXeLLpSqpump"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}

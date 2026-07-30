@@ -19,7 +19,7 @@ const basicFont = Basic({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://madcat.sol'),
+  metadataBase: new URL('https://madcat-sol.netlify.app'),
   title: {
     default: '$MADCAT | Built for the Pack - Solana Meme Movement',
     template: '%s | MADCAT',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: 'MADCAT | Built for the Pack - Solana Meme Movement',
     description:
       'Join the MADCAT pack on Solana. Aggressive by nature, loyal to the community, and built to dominate.',
-    url: 'https://madcat.sol',
+    url: 'https://madcat-sol.netlify.app',
     siteName: 'MADCAT',
     images: [
       {
