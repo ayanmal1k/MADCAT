@@ -124,7 +124,7 @@ export function TokenomicsSection() {
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-center lg:items-start text-center lg:text-left w-full max-w-lg lg:max-w-xl xl:max-w-2xl"
         >
@@ -145,7 +145,7 @@ export function TokenomicsSection() {
         <motion.div
           initial={{ opacity: 0, scale: 0.85 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="relative flex items-center justify-center my-2 sm:my-4"
         >
@@ -224,7 +224,7 @@ export function TokenomicsSection() {
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col gap-3.5 sm:gap-4 w-full max-w-xs sm:max-w-sm"
         >

@@ -15,7 +15,7 @@ export function AboutSection() {
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6 flex justify-center lg:justify-start items-end pb-0 mb-0 relative z-20"
           >
@@ -35,7 +35,7 @@ export function AboutSection() {
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6 flex flex-col gap-5 sm:gap-6 relative pb-6 sm:pb-8 lg:pb-12"
           >
@@ -80,7 +80,7 @@ export function AboutSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             whileHover={{ y: -6, scale: 1.02 }}
             className="flex items-center gap-4 sm:gap-5 p-5 sm:p-6 lg:p-7 rounded-2xl bg-zinc-950/95 border border-zinc-800/80 hover:border-red-600/60 shadow-lg hover:shadow-[0_10px_30px_rgba(230,28,28,0.25)] transition-all duration-300 group cursor-pointer"
@@ -108,7 +108,7 @@ export function AboutSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             whileHover={{ y: -6, scale: 1.02 }}
             className="flex items-center gap-4 sm:gap-5 p-5 sm:p-6 lg:p-7 rounded-2xl bg-zinc-950/95 border border-zinc-800/80 hover:border-amber-500/60 shadow-lg hover:shadow-[0_10px_30px_rgba(247,176,0,0.25)] transition-all duration-300 group cursor-pointer"
@@ -136,7 +136,7 @@ export function AboutSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             whileHover={{ y: -6, scale: 1.02 }}
             className="flex items-center gap-4 sm:gap-5 p-5 sm:p-6 lg:p-7 rounded-2xl bg-zinc-950/95 border border-zinc-800/80 hover:border-orange-600/60 shadow-lg hover:shadow-[0_10px_30px_rgba(234,88,12,0.25)] transition-all duration-300 group cursor-pointer"

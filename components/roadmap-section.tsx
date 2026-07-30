@@ -66,7 +66,7 @@ export function RoadmapSection() {
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="w-full max-w-[280px] sm:max-w-[380px] md:max-w-[460px] lg:max-w-[500px] flex justify-center lg:justify-start"
           >
@@ -105,7 +105,7 @@ export function RoadmapSection() {
                     key={item.step}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.2 }}
                     transition={{ duration: 0.6, delay: idx * 0.15 }}
                     className="flex flex-col items-center text-center group cursor-pointer"
                   >

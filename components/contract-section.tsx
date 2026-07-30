@@ -16,7 +16,13 @@ export function ContractSection() {
 
   return (
     <section className="w-full bg-black border-y border-zinc-900 py-4 sm:py-5 md:py-6 px-4 sm:px-8 lg:px-14 selection:bg-[#F7B000] selection:text-black">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-5 md:gap-7">
+      <motion.div 
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-5 md:gap-7"
+      >
         
         {/* Left: CONTRACT ADDRESS Heading in Ultra Fresh Font */}
         <div className="font-ultra-fresh text-[#F7B000] italic font-black text-lg sm:text-xl md:text-2xl lg:text-3xl uppercase tracking-wider whitespace-nowrap text-center md:text-left drop-shadow-[0_2px_8px_rgba(247,176,0,0.35)]">
@@ -43,7 +49,7 @@ export function ContractSection() {
           )}
         </motion.button>
 
-      </div>
+      </motion.div>
     </section>
   )
 }
