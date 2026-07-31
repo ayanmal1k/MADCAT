@@ -70,12 +70,12 @@ export function Footer() {
             </p>
           </div>
 
-          {/* MIDDLE COLUMN: Cat Image centered - Made Much Bigger */}
+          {/* MIDDLE COLUMN: Cat Image centered */}
           <div className="flex justify-center items-center">
             <motion.div
-              whileHover={{ scale: 1.06 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="relative w-64 sm:w-80 md:w-96 lg:w-[420px] h-64 sm:h-80 md:h-96 lg:h-[420px] -my-4 sm:-my-6 lg:-my-10"
+              className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 -my-2 sm:-my-4 lg:-my-6"
             >
               <Image
                 src="/cat.png"
@@ -88,19 +88,19 @@ export function Footer() {
           </div>
 
           {/* RIGHT COLUMN: 3 Circular Buttons + Columned Nav Links */}
-          <div className="flex flex-col items-center md:items-end gap-6">
+          <div className="flex flex-col items-center md:items-end gap-6 w-full">
 
             {/* 3 Circular Social Buttons */}
-            <div className="flex items-center gap-3">
+            <div className="relative z-20 flex items-center justify-center md:justify-end gap-3.5 sm:gap-4 w-full">
 
               {/* Telegram Button */}
               <motion.a
                 href="https://t.me/+nkVhclURSUhhZjZh"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.15, y: -3 }}
+                whileHover={{ scale: 1.12, y: -3 }}
                 whileTap={{ scale: 0.92 }}
-                className="w-12 h-12 rounded-full bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center text-white shadow-lg hover:border-[#EAA71B] hover:text-[#EAA71B] hover:bg-black hover:shadow-[0_0_15px_rgba(234,167,27,0.4)] transition-all"
+                className="w-12 h-12 rounded-full bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center text-white shadow-lg hover:border-[#EAA71B] hover:text-[#EAA71B] hover:bg-black hover:shadow-[0_0_15px_rgba(234,167,27,0.4)] transition-all flex-shrink-0"
                 title="Telegram"
               >
                 <TelegramIcon className="w-5 h-5" />
@@ -111,9 +111,9 @@ export function Footer() {
                 href="https://x.com/madcat9505"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.15, y: -3 }}
+                whileHover={{ scale: 1.12, y: -3 }}
                 whileTap={{ scale: 0.92 }}
-                className="w-12 h-12 rounded-full bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center text-white shadow-lg hover:border-white hover:bg-black hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all"
+                className="w-12 h-12 rounded-full bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center text-white shadow-lg hover:border-white hover:bg-black hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all flex-shrink-0"
                 title="Twitter / X"
               >
                 <TwitterIcon className="w-5 h-5" />
@@ -124,9 +124,9 @@ export function Footer() {
                 href="https://pump.fun/coin/8a7hJjAFdYPadrgupNXskfsaeQNyeRTsBXeLLpSqpump"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.15, y: -3 }}
+                whileHover={{ scale: 1.12, y: -3 }}
                 whileTap={{ scale: 0.92 }}
-                className="w-12 h-12 rounded-full bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center p-3 text-white shadow-lg hover:border-red-500 hover:bg-black hover:shadow-[0_0_15px_rgba(229,46,46,0.4)] transition-all"
+                className="w-12 h-12 rounded-full bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center p-3 text-white shadow-lg hover:border-red-500 hover:bg-black hover:shadow-[0_0_15px_rgba(229,46,46,0.4)] transition-all flex-shrink-0"
                 title="Solana / DexScreener"
               >
                 <Image
@@ -141,8 +141,8 @@ export function Footer() {
             </div>
 
             {/* Columned Navigation Links */}
-            <div className="relative mt-2">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none -z-0 w-64 h-64 md:w-80 md:h-80 md:translate-x-[-30%]">
+            <div className="relative z-10 mt-2">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 opacity-40 md:translate-x-[-20%]">
                 <Image
                   src="/paw.png"
                   alt="Paw Background"
